@@ -3,11 +3,28 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import About from './routes/About';
+import Auth from './routes/Auth'
+import Reservation from './routes/Reservation';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <App />
+    element: <App />,
+    children: [
+      {
+        path: '/about',
+        element:<About />
+      },
+      {
+        path: '/reservation',
+        element:<Reservation />
+      },
+      {
+        path: '/auth',
+        element:<Auth />
+      }
+    ]
   }
 ])
 
