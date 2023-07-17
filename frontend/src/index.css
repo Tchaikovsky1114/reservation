@@ -2,13 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  scroll-behavior: smooth;
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #222;
+  background: linear-gradient(to right #000, #222, #333, #444);
+  color: #fee;
 }
 
-#root {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background: linear-gradient(180deg, #F5F7FA 0%, #f7f7f7 100%);
+html {
+  scroll-behavior: smooth;
 }
