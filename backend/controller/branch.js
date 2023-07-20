@@ -16,6 +16,8 @@ exports.getBranch = async (req, res ,next) => {
     const result = await db.query('SELECT * FROM branch WHERE id = ?', [id]);
     res.send(result);
 }
+
+
 exports.postBranch = async (req, res ,next) => {
   const { name, address, tel, image, id, status, description, location } = req.body;
     const branch = new Branch(name, address, tel, image, id, status, description, location)
