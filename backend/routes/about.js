@@ -1,7 +1,7 @@
 const express = require('express');
 
 const router = express.Router()
-const branchController = require('../controllers/branch')
+const branchController = require('../controller/branch')
 
 
 

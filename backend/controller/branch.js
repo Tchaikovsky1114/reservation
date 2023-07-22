@@ -1,4 +1,4 @@
-const db = require('../config/db');
+
 
 const Branch = require('../model/branch');
 
