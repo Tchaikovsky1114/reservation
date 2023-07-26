@@ -1,12 +1,12 @@
-var express = require('express');
-var router = express.Router();
-const db = require('../psql');
+const express = require('express');
+const router = express.Router();
+const userController = require('../controller/user')
 /* GET users listing. */
 
-router.get('/', db.getUsers)
-router.get('/:id', db.getUserById)
-router.post('/', db.createUser)
-router.put('/:id', db.updateUser)
-router.delete('/:id', db.deleteUser)
+router.get('/', userController.getUsers)
+router.get('/:id', userController.getUserById)
+router.post('/', userController.createUser)
+router.put('/:id', userController.updateUser)
+router.delete('/:id', userController.deleteUser)
 
 module.exports = router;

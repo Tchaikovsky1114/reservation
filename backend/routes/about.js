@@ -1,15 +1,14 @@
 const express = require('express');
-
 const router = express.Router()
-const branchController = require('../controller/branch')
+const branchesController = require('../controller/branch')
 
 
 
-router.get('/branches', branchController.getAllBranch);
+router.get('/branches', branchesController.getAllBranch);
 
-router.get('/branches/:id', branchController.getBranch);
+router.get('/branches/:id', branchesController.getBranch);
 
-router.post('/branches', branchController.postBranch);
+router.post('/branches', branchesController.postBranch);
 
 
 
